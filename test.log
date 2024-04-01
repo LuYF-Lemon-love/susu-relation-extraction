@@ -1,0 +1,374 @@
+source /home/luyanfeng/my_code/github/susu-relation-extraction/env/bin/activate
+(base) luyanfeng@star-Super-Server:~/my_code/github/susu-relation-extraction$ source /home/luyanfeng/my_code/github/susu-relation-extraction/env/bin/activate
+(env) (base) luyanfeng@star-Super-Server:~/my_code/github/susu-relation-extraction$ ls
+datasets  demo_predict.py  demo_train.py  env  LICENSE  pretrained_models  README.md  relation_extraction  requirements.txt  run.sh  saved_models
+(env) (base) luyanfeng@star-Super-Server:~/my_code/github/susu-relation-extraction$ python demo_train.py 
+10000it [00:03, 3328.82it/s]
+Epoch: 0
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:04<00:00, 19.26it/s]
+1000it [00:00, 2444.07it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 99.38it/s]
+/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+              precision    recall  f1-score   support
+
+     unknown       0.48      0.15      0.23       100
+          父母       0.75      0.77      0.76       228
+          夫妻       0.67      0.87      0.75       270
+          师生       0.71      0.50      0.59        54
+        兄弟姐妹       0.54      0.53      0.53        81
+          合作       0.51      0.88      0.64       110
+          情侣       0.86      0.33      0.48        57
+          祖孙       0.58      0.41      0.48        17
+          好友       0.71      0.44      0.55        27
+          亲戚       0.00      0.00      0.00        13
+          同门       1.00      0.04      0.08        24
+         上下级       0.42      0.58      0.49        19
+
+    accuracy                           0.64      1000
+   macro avg       0.60      0.46      0.47      1000
+weighted avg       0.65      0.64      0.61      1000
+
+/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Epoch: 1
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:04<00:00, 19.37it/s]
+1000it [00:00, 2464.19it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 99.18it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.74      0.25      0.37       100
+          父母       0.78      0.75      0.77       228
+          夫妻       0.69      0.87      0.77       270
+          师生       0.77      0.69      0.73        54
+        兄弟姐妹       0.56      0.60      0.58        81
+          合作       0.71      0.80      0.75       110
+          情侣       0.63      0.65      0.64        57
+          祖孙       0.59      0.59      0.59        17
+          好友       0.58      0.52      0.55        27
+          亲戚       1.00      0.31      0.47        13
+          同门       0.76      0.67      0.71        24
+         上下级       0.60      0.63      0.62        19
+
+    accuracy                           0.70      1000
+   macro avg       0.70      0.61      0.63      1000
+weighted avg       0.71      0.70      0.68      1000
+
+Epoch: 2
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:04<00:00, 19.36it/s]
+1000it [00:00, 2453.90it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 99.99it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.49      0.37      0.42       100
+          父母       0.87      0.71      0.78       228
+          夫妻       0.77      0.83      0.80       270
+          师生       0.88      0.70      0.78        54
+        兄弟姐妹       0.57      0.70      0.63        81
+          合作       0.72      0.83      0.77       110
+          情侣       0.68      0.75      0.72        57
+          祖孙       0.58      0.65      0.61        17
+          好友       0.61      0.70      0.66        27
+          亲戚       0.38      0.38      0.38        13
+          同门       0.57      0.83      0.68        24
+         上下级       0.61      0.58      0.59        19
+
+    accuracy                           0.72      1000
+   macro avg       0.64      0.67      0.65      1000
+weighted avg       0.72      0.72      0.71      1000
+
+Epoch: 3
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:05<00:00, 19.20it/s]
+1000it [00:00, 2433.28it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 101.89it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.48      0.47      0.47       100
+          父母       0.75      0.79      0.77       228
+          夫妻       0.82      0.79      0.81       270
+          师生       0.78      0.65      0.71        54
+        兄弟姐妹       0.75      0.59      0.66        81
+          合作       0.74      0.74      0.74       110
+          情侣       0.73      0.77      0.75        57
+          祖孙       0.60      0.53      0.56        17
+          好友       0.51      0.70      0.59        27
+          亲戚       0.40      0.46      0.43        13
+          同门       0.66      0.88      0.75        24
+         上下级       0.58      0.74      0.65        19
+
+    accuracy                           0.72      1000
+   macro avg       0.65      0.68      0.66      1000
+weighted avg       0.72      0.72      0.72      1000
+
+Epoch: 4
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:04<00:00, 19.25it/s]
+1000it [00:00, 2429.22it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 101.83it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.49      0.47      0.48       100
+          父母       0.78      0.78      0.78       228
+          夫妻       0.81      0.82      0.81       270
+          师生       0.72      0.72      0.72        54
+        兄弟姐妹       0.70      0.59      0.64        81
+          合作       0.81      0.80      0.80       110
+          情侣       0.75      0.81      0.78        57
+          祖孙       0.60      0.71      0.65        17
+          好友       0.56      0.74      0.63        27
+          亲戚       0.55      0.46      0.50        13
+          同门       0.83      0.62      0.71        24
+         上下级       0.54      0.68      0.60        19
+
+    accuracy                           0.73      1000
+   macro avg       0.68      0.68      0.68      1000
+weighted avg       0.73      0.73      0.73      1000
+
+Epoch: 5
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:03<00:00, 19.73it/s]
+1000it [00:00, 3078.11it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 106.85it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.57      0.54      0.55       100
+          父母       0.78      0.81      0.79       228
+          夫妻       0.83      0.76      0.79       270
+          师生       0.84      0.67      0.74        54
+        兄弟姐妹       0.70      0.63      0.66        81
+          合作       0.77      0.82      0.79       110
+          情侣       0.59      0.88      0.70        57
+          祖孙       0.63      0.71      0.67        17
+          好友       0.68      0.48      0.57        27
+          亲戚       0.64      0.69      0.67        13
+          同门       0.64      0.88      0.74        24
+         上下级       0.72      0.68      0.70        19
+
+    accuracy                           0.74      1000
+   macro avg       0.70      0.71      0.70      1000
+weighted avg       0.74      0.74      0.74      1000
+
+Epoch: 6
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:03<00:00, 19.81it/s]
+1000it [00:00, 3080.04it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 104.14it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.52      0.50      0.51       100
+          父母       0.81      0.76      0.79       228
+          夫妻       0.79      0.84      0.81       270
+          师生       0.73      0.70      0.72        54
+        兄弟姐妹       0.75      0.62      0.68        81
+          合作       0.88      0.73      0.80       110
+          情侣       0.77      0.77      0.77        57
+          祖孙       0.52      0.88      0.65        17
+          好友       0.50      0.70      0.58        27
+          亲戚       0.39      0.69      0.50        13
+          同门       0.86      0.75      0.80        24
+         上下级       0.61      0.74      0.67        19
+
+    accuracy                           0.74      1000
+   macro avg       0.68      0.72      0.69      1000
+weighted avg       0.75      0.74      0.74      1000
+
+Epoch: 7
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:04<00:00, 19.45it/s]
+1000it [00:00, 2430.40it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 102.70it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.65      0.44      0.52       100
+          父母       0.80      0.79      0.79       228
+          夫妻       0.80      0.80      0.80       270
+          师生       0.78      0.70      0.74        54
+        兄弟姐妹       0.61      0.64      0.63        81
+          合作       0.76      0.85      0.80       110
+          情侣       0.72      0.82      0.77        57
+          祖孙       0.58      0.82      0.68        17
+          好友       0.61      0.70      0.66        27
+          亲戚       0.36      0.31      0.33        13
+          同门       0.71      0.83      0.77        24
+         上下级       0.61      0.74      0.67        19
+
+    accuracy                           0.74      1000
+   macro avg       0.67      0.70      0.68      1000
+weighted avg       0.74      0.74      0.74      1000
+
+Epoch: 8
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:04<00:00, 19.52it/s]
+1000it [00:00, 2408.61it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 102.24it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.49      0.48      0.48       100
+          父母       0.84      0.81      0.82       228
+          夫妻       0.82      0.82      0.82       270
+          师生       0.77      0.67      0.71        54
+        兄弟姐妹       0.70      0.70      0.70        81
+          合作       0.81      0.75      0.78       110
+          情侣       0.81      0.81      0.81        57
+          祖孙       0.61      0.82      0.70        17
+          好友       0.54      0.70      0.61        27
+          亲戚       0.60      0.69      0.64        13
+          同门       0.74      0.83      0.78        24
+         上下级       0.59      0.68      0.63        19
+
+    accuracy                           0.75      1000
+   macro avg       0.69      0.73      0.71      1000
+weighted avg       0.75      0.75      0.75      1000
+
+Epoch: 9
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:04<00:00, 19.53it/s]
+1000it [00:00, 2419.25it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 99.98it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.60      0.43      0.50       100
+          父母       0.78      0.82      0.80       228
+          夫妻       0.81      0.82      0.82       270
+          师生       0.88      0.70      0.78        54
+        兄弟姐妹       0.70      0.58      0.64        81
+          合作       0.76      0.82      0.79       110
+          情侣       0.69      0.91      0.79        57
+          祖孙       0.54      0.82      0.65        17
+          好友       0.71      0.74      0.73        27
+          亲戚       0.57      0.62      0.59        13
+          同门       0.87      0.83      0.85        24
+         上下级       0.59      0.68      0.63        19
+
+    accuracy                           0.75      1000
+   macro avg       0.71      0.73      0.71      1000
+weighted avg       0.75      0.75      0.75      1000
+
+Epoch: 10
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:03<00:00, 19.56it/s]
+1000it [00:00, 2432.58it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 103.23it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.64      0.43      0.51       100
+          父母       0.80      0.83      0.82       228
+          夫妻       0.84      0.81      0.82       270
+          师生       0.80      0.61      0.69        54
+        兄弟姐妹       0.71      0.72      0.71        81
+          合作       0.73      0.89      0.80       110
+          情侣       0.80      0.79      0.80        57
+          祖孙       0.55      0.71      0.62        17
+          好友       0.53      0.67      0.59        27
+          亲戚       0.50      0.69      0.58        13
+          同门       0.69      0.83      0.75        24
+         上下级       0.63      0.63      0.63        19
+
+    accuracy                           0.76      1000
+   macro avg       0.69      0.72      0.69      1000
+weighted avg       0.76      0.76      0.75      1000
+
+Epoch: 11
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1250/1250 [01:04<00:00, 19.31it/s]
+1000it [00:00, 2428.95it/s]
+Validation:   0%|                                                                                                                                                           | 0/125 [00:00<?, ?it/s]Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Validation: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:01<00:00, 100.37it/s]
+              precision    recall  f1-score   support
+
+     unknown       0.49      0.55      0.52       100
+          父母       0.81      0.79      0.80       228
+          夫妻       0.83      0.80      0.81       270
+          师生       0.74      0.69      0.71        54
+        兄弟姐妹       0.64      0.68      0.66        81
+          合作       0.80      0.77      0.79       110
+          情侣       0.70      0.86      0.77        57
+          祖孙       0.77      0.59      0.67        17
+          好友       0.75      0.67      0.71        27
+          亲戚       0.50      0.54      0.52        13
+          同门       0.83      0.83      0.83        24
+         上下级       0.63      0.63      0.63        19
+
+    accuracy                           0.74      1000
+   macro avg       0.71      0.70      0.70      1000
+weighted avg       0.75      0.74      0.75      1000
+
+Epoch: 12
+Training:   0%|                                                                                                                                                            | 0/1250 [00:00<?, ?it/s]/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:2688: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  warnings.warn(
+Training:  41%|████████████████████████████████████████████████████████████                                                                                      | 514/1250 [00:26<00:38, 19.07it/s]Training:  41%|████████████████████████████████████████████████████████████                                                                                      | 514/1250 [00:26<00:38, 19.34it/s]
+Traceback (most recent call last):
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/demo_train.py", line 15, in <module>
+    main()
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/demo_train.py", line 11, in main
+    train(hparams)
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/relation_extraction/train.py", line 67, in train
+    for i_batch, sample_batched in enumerate(tqdm(train_loader, desc='Training')):
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/relation_extraction/data_utils.py", line 161, in __getitem__
+    encoded = self.tokenizer.bert_tokenizer.encode_plus(sample_tokens, max_length=self.max_len, pad_to_max_length=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3051, in encode_plus
+    return self._encode_plus(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils.py", line 722, in _encode_plus
+    return self.prepare_for_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3530, in prepare_for_model
+    encoded_inputs = self.pad(
+                     ^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3335, in pad
+    encoded_inputs = self._pad(
+                     ^^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 3732, in _pad
+    encoded_inputs[self.model_input_names[0]] = required_input + [self.pad_token_id] * difference
+                                                                  ^^^^^^^^^^^^^^^^^
+  File "/home/luyanfeng/my_code/github/susu-relation-extraction/env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 1215, in pad_token_id
+    @property
+
+KeyboardInterrupt

@@ -1,2 +1,4 @@
 *.bin
 env/
+saved_models/runs/
+relation_extraction/__pycache__
