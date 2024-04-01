@@ -1,8 +1,20 @@
 # 中文关系抽取
 
-### 数据集
+## 数据集
 
 来自 [buppt/ChineseNRE](https://github.com/buppt/ChineseNRE) 的 [人物关系数据集](https://github.com/buppt/ChineseNRE/raw/master/data/people-relation/train.txt)。
+
+## 配置环境
+
+```bash
+$ git clone git@github.com:LuYF-Lemon-love/susu-relation-extraction.git
+$ cd susu-relation-extraction
+$ python -m venv env
+$ source env/bin/activate
+$ which python
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
+```
 
 ### 模型
 
@@ -17,7 +29,7 @@ bert-base-chinese/
 └── vocab.txt
 ```
 
-### 模型训练20轮的评测结果：
+## 模型训练20轮的评测结果：
 ```
               precision    recall  f1-score   support
 
@@ -39,7 +51,7 @@ bert-base-chinese/
 weighted avg       0.77      0.78      0.77      1000
 ```
 
-### 模型预测效果：
+## 模型预测效果：
 
 run the demo_predict.py
 
