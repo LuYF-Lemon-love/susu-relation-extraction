@@ -1,13 +1,15 @@
-# relation-extraction
-中文关系抽取
+# 中文关系抽取
 
-### 数据集来源：
-https://github.com/buppt/ChineseNRE/raw/master/data/people-relation/train.txt
+### 数据集
 
-### bert_model
-从 https://huggingface.co/models 下载bert-base-chinese模型，解压在pretrained_models下
+来自 [buppt/ChineseNRE](https://github.com/buppt/ChineseNRE) 的 [人物关系数据集](https://github.com/buppt/ChineseNRE/raw/master/data/people-relation/train.txt)。
 
-bert-base-chinese目录结构如下：
+### 模型
+
+下载 [google-bert/bert-base-chinese](https://huggingface.co/google-bert/bert-base-chinese) 模型，存放在 [pretrained_models](./pretrained_models/)。
+
+[bert-base-chinese](./pretrained_models/bert-base-chinese/) 目录结构如下：
+
 ```
 bert-base-chinese/
 ├── config.json
@@ -116,3 +118,6 @@ https://github.com/monologg/R-BERT
 
 https://github.com/crownpku/Information-Extraction-Chinese
 
+## 参考
+
+1. [buppt/ChineseNRE](https://github.com/buppt/ChineseNRE)
