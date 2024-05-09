@@ -18,6 +18,8 @@ $ pip install -r requirements.txt
 
 ### 模型
 
+预训练模型（链接：https://pan.baidu.com/s/1Fqfjrq8XWDwAx4a4S7pjhQ?pwd=0d53 提取码：0d53）
+
 下载 [google-bert/bert-base-chinese](https://huggingface.co/google-bert/bert-base-chinese) 模型，存放在 [pretrained_models](./pretrained_models/)。
 
 [bert-base-chinese](./pretrained_models/bert-base-chinese/) 目录结构如下：
